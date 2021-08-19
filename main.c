@@ -125,7 +125,7 @@ int main(){
         printf("Los valores han sido guardados en el archivo postfijas.txt\n");
     }
 
-    printf("Expresion a evaluar: ");
+    printf("\nExpresion a evaluar: ");
     imprimir_cola(expresion_postfija);
     evaluar(expresion_postfija);//Evaluación de la expresión postfija
     getchar();
