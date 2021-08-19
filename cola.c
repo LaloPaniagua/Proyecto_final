@@ -41,7 +41,7 @@ bool comparar_cola(INFO info1, INFO info2){
     if(info1==info2) return true;
     return false;
 }
-
+//En este caso, se inserta por el final.
 bool enqueue(COLA* l,INFO info){
     NODO* nuevo=crear_nodo(info);
     if(l->head==NULL  && l->tail==NULL){
@@ -57,7 +57,7 @@ bool enqueue(COLA* l,INFO info){
     }
     return false;
 }
-
+//Se elimina por el principio.
 void dequeue(COLA *l){
     if(es_vacia_cola(l)) return;
     else if(l->head==l->tail){
