@@ -1,4 +1,6 @@
 #include "pila.h"
+//Al crearse nuevos nodos, se les asigna su prioridad y booleano automaticamente.
+//Esto simplifica el proceso de infija a postfija.
 NODO* crear_nodo(INFO info){
     NODO* t=(NODO*)malloc(sizeof(NODO));
     t->sig=NULL;
@@ -20,7 +22,7 @@ PILA* crear_pila(){
     return l;
 }
 
-
+//Se inserta al principio
 bool push(PILA* l,INFO info){
     NODO* nuevo=crear_nodo(info);
     if(l->head==NULL  && l->tail==NULL){
@@ -68,7 +70,7 @@ void imprimir_pila(PILA *l){
     printf("\n");
 }
 
-
+//Se elimina al principio.
 void pop(PILA *l){
     if(es_vacia_pila(l)) return;
     else if(l->head==l->tail){
