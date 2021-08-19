@@ -1,8 +1,10 @@
 #include<stdio.h>
 #include "postfija.c"
 void evaluar(COLA* expresion_postfija){
+    int opcion_01;
     char info_placeholder='u',info_nodo_pila,caso;
     double a,b,c,valor_pila;
+    FILE* archivo;
     PILA* p1=crear_pila();
     for(NODO* temporal = expresion_postfija->head;temporal!=NULL;temporal=temporal->sig){
             
@@ -54,4 +56,19 @@ void evaluar(COLA* expresion_postfija){
         }
 
     printf("El resultado final es: %f\n",p1->head->valor);
+    printf("Desea guardar el resultado en un documento de texto?\n1)Si\n2)No\n");
+    scanf("%d",&opcion_01);
+
+    while(opcion_01!=1 && opcion_01!=2){
+        printf("Por favor elige una opcion valida\n");
+        scanf("%d",&opcion_01);
+        getchar();
+    }
+
+    if(opcion_01==1){
+        archivo=fopen("postfijas.txt","a+t");
+            fprintf(archivo,"El resultado es: %f",p1->head->valor);
+        fclose(archivo);
+        printf("El resultado ha sido guardado en el archivo postfijas.txt\n");
+    }
 }
