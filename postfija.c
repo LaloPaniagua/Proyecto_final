@@ -1,8 +1,8 @@
 #include "pila.c"
 #include "cola.c"
 bool esOperador(char x){
-    char operadores[6]={'(','^','*','/','+','-'};
-    if (x == operadores[0] || x==operadores[1] || x==operadores[2] || x==operadores[3] || x==operadores[4] || x==operadores[5])
+    char operadores[7]={'(','^','*','/','+','-','%'};
+    if (x == operadores[0] || x==operadores[1] || x==operadores[2] || x==operadores[3] || x==operadores[4] || x==operadores[5]|| x==operadores[6])
         return true;
     return false;
 }
