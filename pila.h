@@ -9,7 +9,6 @@
 typedef struct _nodo NODO;
 typedef char INFO;
 
-
 //Estructura nodo (se usará la misma estructura nodo para las pilas y para las colas)
 struct _nodo{
     INFO info;
