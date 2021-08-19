@@ -21,10 +21,10 @@ int main(){
         for(NODO* temporal=expresion_postfija->head;temporal!=NULL;temporal=temporal->sig){
             fprintf(archivo,"%c",temporal->info);
         }
+        fprintf(archivo,"\n");
         fclose(archivo);
         printf("La expresion ha sido guardada en el archivo postfijas.txt\n");
     }
-
     printf("Desea leer los valores a evaluar desde un archivo?\n");
     printf("1)Si (Considera que los numeros en el archivo deben estar separados por una coma)\n2)No, prefiero ingresarlos desde la consola\n");
     scanf("%d",&opcion_01);
@@ -88,8 +88,26 @@ int main(){
             }
         }
     printf("\n");
+    printf("Desea guardar los valores en un documento de texto?\n1)Si\n2)No\n");
+    scanf("%d",&opcion_01);
 
+    while(opcion_01!=1 && opcion_01!=2){
+        printf("Por favor elige una opcion valida\n");
+        scanf("%d",&opcion_01);
+        getchar();
+    }
 
+    if(opcion_01==1){
+        archivo=fopen("postfijas.txt","a+t");
+        for(NODO* temporal = expresion_postfija->head;temporal!=NULL;temporal=temporal->sig){
+            if(temporal->operador==false) {
+                fprintf(archivo,"%c %f\n",temporal->info,temporal->valor);
+            }
+        }
+    printf("\n");
+        fclose(archivo);
+        printf("Los valores han sido guardados en el archivo postfijas.txt\n");
+    }
 
     printf("Expresion a evaluar: ");
     imprimir_cola(expresion_postfija);
