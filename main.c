@@ -112,7 +112,7 @@ int main(){
         getchar();
     }
 
-    //Guardado de los valores en el documento valores.txt
+    //Guardado de los valores en el documento postfijas.txt
     if(opcion_01==1){
         archivo=fopen("postfijas.txt","a+t");
         for(NODO* temporal = expresion_postfija->head;temporal!=NULL;temporal=temporal->sig){
