@@ -76,3 +76,4 @@ void evaluar(COLA* expresion_postfija){
         printf("El resultado ha sido guardado en el archivo postfijas.txt\n");
     }
 }
+//Creado por Eduardo Paniagua, Diego Barragan, Jhusteene Salgado y Alejandra Avila en 14/08/2021.
