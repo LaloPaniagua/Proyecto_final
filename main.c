@@ -25,7 +25,8 @@ int main(){
         printf("La expresion ha sido guardada en el archivo postfijas.txt\n");
     }
 
-    printf("Desea leer los valores a evaluar desde un archivo?\n1)Si (Considera que los numeros en el archivo deben estar separados por una coma)\n2)No, prefiero ingresarlos desde la consola\n");
+    printf("Desea leer los valores a evaluar desde un archivo?\n");
+    printf("1)Si (Considera que los numeros en el archivo deben estar separados por una coma)\n2)No, prefiero ingresarlos desde la consola\n");
     scanf("%d",&opcion_01);
 
     while(opcion_01!=1 && opcion_01!=2){
