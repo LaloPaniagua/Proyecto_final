@@ -5,7 +5,7 @@ NODO* crear_nodo(INFO info){
     t->info=info;
     if(t->info=='(') t->prioridad=6;
     else if(t->info=='^') t->prioridad=5;
-    else if(t->info=='*' || t->info=='/') t->prioridad=4;
+    else if(t->info=='*' || t->info=='/'|| t->info=='%') t->prioridad=4;
     else if(t->info=='+' || t->info=='-') t->prioridad=3;
     else t->prioridad=1024;
 
@@ -36,7 +36,6 @@ bool push(PILA* l,INFO info){
     }
     return false;
 }
-
 
 void eliminar_nodo(NODO* n){
     if(n->sig==NULL){
