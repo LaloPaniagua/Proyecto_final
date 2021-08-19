@@ -5,9 +5,12 @@
 #include <string.h>
 #include <stdlib.h>
 #include<math.h>
+//Definición de los aliases para nodo e info
 typedef struct _nodo NODO;
 typedef char INFO;
 
+
+//Estructura nodo (se usará la misma estructura nodo para las pilas y para las colas)
 struct _nodo{
     INFO info;
     NODO *sig;
@@ -16,6 +19,7 @@ struct _nodo{
     bool operador;
 };
 
+//Estructura para las pilas
 typedef struct _pila PILA;
 struct _pila{
     NODO *head;
@@ -23,7 +27,7 @@ struct _pila{
     int num;
 };
 
-
+//Funciones para las pilas
 NODO* crear_nodo(INFO info);
 void eliminar_nodo(NODO* n);
 PILA* crear_pila();
