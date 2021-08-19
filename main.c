@@ -122,7 +122,7 @@ int main(){
         }
     printf("\n");
         fclose(archivo);
-        printf("Los valores han sido guardados en el archivo valores.txt\n");
+        printf("Los valores han sido guardados en el archivo postfijas.txt\n");
     }
 
     printf("Expresion a evaluar: ");
