@@ -32,7 +32,7 @@ int main(){
     }
     
     //Se le pregunta al usuario si desea leer los valores a evaluar de un archivo
-    printf("Desea leer los valores a evaluar desde un archivo?\n");
+    printf("\nDesea leer los valores a evaluar desde un archivo?\n");
     printf("1)Si (Considera que los numeros en el archivo deben estar separados por una coma)\n2)No, prefiero ingresarlos desde la consola\n");
     scanf("%d",&opcion_01);
 
