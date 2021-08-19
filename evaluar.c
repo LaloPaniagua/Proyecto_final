@@ -1,3 +1,4 @@
+#include<stdio.h>
 #include "postfija.c"
 void evaluar(COLA* expresion_postfija){
     char info_placeholder='u',info_nodo_pila,caso;
@@ -35,6 +36,11 @@ void evaluar(COLA* expresion_postfija){
                         break;
                     case('/'):
                         c=a/b;
+                        push(p1,info_placeholder);
+                        p1->head->valor=c;
+                        break;
+                    case('%'):
+                        c = (int)a%(int)b;
                         push(p1,info_placeholder);
                         p1->head->valor=c;
                         break;
